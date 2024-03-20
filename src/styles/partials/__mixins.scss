@@ -1,0 +1,99 @@
+@use "./__variables" as *;
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+//mobile text styles
+
+@mixin font-m-h1-page-header {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+
+@mixin font-m-h2-subheader {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+@mixin font-m-h3-labels-links-buttons {
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+@mixin font-m-h4-table-header {
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  font-weight: 400;
+}
+
+@mixin font-m-p1-body-large {
+  font-size: 0.9375rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+}
+
+@mixin font-m-p2-body-medium {
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+@mixin font-m-p3-body-small {
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  font-weight: 400;
+}
+
+//desktop & tablet text styles
+
+@mixin font-h1-page-header {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+}
+
+@mixin font-h2-subheader {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+@mixin font-h3-labels-links-buttons {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+}
+
+@mixin font-h4-table-header {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+@mixin font-p1-body-large {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+
+@mixin font-p2-body-medium {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+}
+@mixin font-p3-body-small {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
