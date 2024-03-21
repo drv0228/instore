@@ -1,0 +1,11 @@
+@use "../../styles/partials/_variables" as *;
+@use "../../styles/partials/_typography" as *;
+@use "../../styles/partials/_mixins" as *;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $background-light-grey;
+}

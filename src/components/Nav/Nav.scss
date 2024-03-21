@@ -1,0 +1,84 @@
+@use "../../styles/partials/_variables" as *;
+@use "../../styles/partials/_typography" as *;
+@use "../../styles/partials/_mixins" as *;
+
+.nav {
+  padding: 1rem;
+  background-color: $background-graphite;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    align-items: center;
+  }
+
+  @include desktop {
+    padding: 1.5rem 6rem 1.5rem 6rem;
+  }
+  &__logo {
+    color: $primary-white;
+  }
+  &__img-container {
+    text-align: center;
+  }
+
+  &__link-container {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      padding-top: 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a.nav__link {
+    color: $secondary-cloud;
+    @include font-m-h3-labels-links-buttons;
+    font-family: "Titillium Web", sans-serif;
+    text-decoration: none;
+    width: 48%;
+    text-align: center;
+    @include tablet {
+      width: 100%;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      color: white;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: $primary-instock-black;
+      height: 36px;
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    @include tablet {
+      @include font-h3-labels-links-buttons;
+    }
+
+    &--padding {
+      margin-left: 2.3rem;
+    }
+  }
+
+  &--selected {
+    background-color: $primary-instock-black;
+    height: 36px;
+    width: 100%;
+    border-radius: 20px;
+  }
+  p {
+    margin: 0.5rem;
+    @include tablet {
+      width: 75%;
+    }
+  }
+}

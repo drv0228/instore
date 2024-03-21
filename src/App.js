@@ -12,6 +12,7 @@ function App() {
      <Routes>
       <Route>
         <Route path="/" element={<Home />} />
+        {/* <Route path="/inventory" element={<InventoryList />} /> */}
       </Route>
      </Routes>
      </BrowserRouter>
