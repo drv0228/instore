@@ -1,0 +1,26 @@
+@use "../../styles/partials/__variables" as *;
+@use "../../styles/partials/__typography" as *;
+@use "../../styles/partials/__mixins" as *;
+
+.footer {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  &__p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    @include font-m-p3-body-small;
+    font-family: "Titillium Web", sans-serif;
+    color: $secondary-slate;
+    text-align: center;
+    padding: 1.5rem 0;
+    @include tablet {
+      @include font-p3-body-small;
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+    }
+    @include desktop {
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+    }
+  }
+}
