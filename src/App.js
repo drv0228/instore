@@ -13,6 +13,8 @@ function App() {
      <Routes>
       <Route>
         <Route path="/" element={<Home />} />
+        {/* <Route path="/storedetails/:id" element={<StoreDetails />} /> */}
+        {/* <Route path="/deletestore/:id" element={<Deletestore />} /> */}
         {/* <Route path="/inventory" element={<InventoryList />} /> */}
       </Route>
      </Routes>

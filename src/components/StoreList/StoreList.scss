@@ -1,0 +1,330 @@
+@use "../../styles/partials/__variables" as *;
+@use "../../styles/partials/__typography" as *;
+@use "../../styles/partials/__mixins" as *;
+
+.stores{
+    font-family: Titillium Web, sans-serif;
+    background: linear-gradient(
+    $background-graphite 3%,
+    $background-light-grey 3%,
+    $background-light-grey 85%
+  );
+
+  @include tablet{
+    background: linear-gradient(
+        $background-graphite 13%,
+        $background-light-grey 4%,
+        $background-light-grey 85%
+      );
+  }
+  @include desktop{
+    background: linear-gradient(
+        $background-graphite 14%,
+        $background-light-grey 4%,
+        $background-light-grey 85%
+      );
+  }
+
+  &-content{
+    background-color: $primary-white;
+    margin: 0 1rem;
+    color: $primary-instock-black;
+    border-radius: .1875rem;
+    box-shadow: 0 .125rem .3125rem 0 rgba(19, 24, 44, 0.10);
+
+    &__links{
+        text-decoration: none;
+      }
+    
+
+    @include tablet {
+        margin: 0 2.5rem;
+    }
+
+    @include desktop {
+        margin: 0 8.125rem;
+    }
+
+    &__nav{
+        padding: 1rem;
+        border-bottom: solid .0625rem $secondary-cloud;
+        @include tablet {
+            padding: 2rem;
+            display: flex;
+            border-bottom: none;
+        }
+        @include desktop{
+            padding: 2rem 2.5rem 1.375rem 2.5rem;
+        }
+
+        &--title {
+            @include font-m-h1-page-header ;
+            padding: .75rem 0;
+            margin: 0;
+
+            @include tablet {
+              @include font-h1-page-header;
+              padding: 0;
+            }
+        }
+
+        &--search {
+            border: solid .0625rem $secondary-cloud;
+            border-radius: 1.25rem;
+            background-color: $primary-white;
+            height: 11.250vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            @include tablet {
+                height: 4.948vw;
+                width: 24.089vw;
+                margin-left: 3.125rem;
+                margin-right: 1rem;
+                padding: 0 .3125rem;
+            }
+            @include desktop{
+                height: 2.969vw;
+                width: 21.406vw;
+                margin-left: 17.8125rem;
+                padding: 0;
+            }
+
+            &-field{
+                background-color:$primary-white;
+                border: none;
+                color: $secondary-slate;
+                margin-bottom: 0;
+                padding-left: 0;
+            @include font-m-p2-body-medium;
+            } 
+        }
+
+        &--button {
+            border: solid .0625rem $primary-instock-indigo;
+            border-radius: 1.25rem;
+            background-color:$primary-instock-indigo;
+            height: 11.250vw;
+            color: $primary-white;
+            width: 100%;
+            margin: .75rem 0;
+            @include font-m-p2-body-medium;
+
+            @include tablet{
+                @include font-h3-labels-links-buttons;
+                margin: 0;
+                width: 24.089vw;
+                height: 4.948vw;
+            }
+
+            @include desktop{
+                height: 2.969vw;
+                 width: 13.125vw
+            }
+        }
+    }
+
+    &__titles{
+        display: none;
+
+        @include tablet{
+            color: $secondary-slate;
+            background-color: $background-light-grey;
+            display: flex;
+            padding: 0 2rem;
+            @include font-h4-table-header;
+            height: 5.208vw;
+        }
+        @include desktop{
+            padding: 0 2.5rem;
+            justify-content: space-between;
+            height: 3.125vw;
+        }
+
+        &--store{
+            @include tablet{
+            display: flex;
+            align-items: center;
+            width: 16.927vw; 
+            }  
+        }
+        &--address{
+            @include tablet{
+            display: flex;
+            align-items: center;
+            width: 14.974vw; 
+            margin-right: -0.1875rem;
+            }
+            @include desktop{
+                margin-right: .8125rem;
+            }    
+        }
+        &--contact-name{
+            @include tablet{
+            display: flex;
+            align-items: center;
+            width: 18.229vw;
+            justify-content: center;
+            }  
+        }
+        &--contact-info{
+            @include tablet{
+            display: flex;
+            align-items: center;
+            width: 23.438vw;
+            justify-content: center;
+            }
+        }
+        &--actions{
+            @include tablet{
+            display: flex;
+            align-items: center;
+            width: 9.417vw;
+            justify-content: flex-end;
+            }  
+        }
+    }
+
+    &__list {
+        
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &-store {
+            padding: 1rem;
+            border-bottom: $secondary-cloud .0625rem solid;
+
+            @include tablet {
+                p {
+                    margin: 0;
+                }
+                display: flex;
+                padding: 1rem 2rem;
+            }
+            @include desktop{
+                padding: .8125rem 2.5rem;
+            }
+
+            &--rows {
+                display: flex;
+                justify-content: space-between;
+                @include tablet {
+                  align-items: center; 
+                }   
+            }
+
+            &--columns-2{
+            margin-right: -0.25rem;
+                @include tablet{
+                margin-right: 0;        
+                }
+            }
+
+            &--title{
+            color: $secondary-slate;
+              @include font-m-h4-table-header;
+                @include tablet {
+                    display: none;
+                }
+            }
+
+            &--name{
+            @include font-m-h3-labels-links-buttons;
+            color: $primary-instock-indigo;
+                @include tablet {
+                    width: 16.406vw;
+                }
+                @include desktop{
+                    width: 14.8vw;
+                }
+
+                &-layout{
+                display: flex;
+                align-items: center; 
+                }
+            }
+
+            &--contact-name{
+            @include font-m-p2-body-medium;
+            color:  $primary-instock-black;
+            width: 45.625vw;
+            @include tablet{
+                display: none;   
+            }
+            }
+
+
+            &--address-tablet{
+            display: none;
+                @include tablet{
+                    display: block;
+                    @include font-m-p2-body-medium;
+                    color:  $primary-instock-black;
+                    width: 14.583vw;
+                    margin-right: .625rem;
+                }
+                @include desktop{
+                    width: 14.766vw;
+                    margin-right: 2.1875rem;
+                }
+            }
+
+            &--address{
+                width: 31.563vw;
+                margin-right: .75rem;
+                @include font-m-p2-body-medium;
+                color:  $primary-instock-black;
+                @include tablet{
+                    display: none;
+                }
+            }
+
+            &--contact-name-tablet{
+                display: none;
+                @include tablet{
+                    display: block;
+                @include font-m-p2-body-medium;
+                color:  $primary-instock-black;
+                width: 17.839vw; 
+                }
+                @include desktop{
+                width: 16vw;
+                }
+            }
+
+
+            &--contact-info{
+                @include font-m-p2-body-medium;
+                color:  $primary-instock-black;
+                @include tablet{
+                    width: 23.438vw;
+                }
+                @include desktop{
+                    width: 15vw;
+                    margin-right: 3.9375rem;
+                }
+            }
+
+            &--actions{
+                display: flex;
+                justify-content: space-between;
+                @include tablet{
+                    column-gap: 1rem;
+                }
+            }
+
+           &:hover:not(.selected) {
+                background-color: rgba(46, 102, 229, 0.07);
+            }
+
+            &--selected {
+                background-color: rgba(46, 102, 229, 0.07);
+            }
+        }     
+    }
+  }
+}
