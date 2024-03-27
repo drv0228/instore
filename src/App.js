@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home/Home.js";
 import Nav from "./components/Nav/Nav.js";
 import Footer from './components/Footer/Footer.js';
+import DeleteStore from './components/DeleteStore/DeleteStore.js';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Route>
         <Route path="/" element={<Home />} />
         {/* <Route path="/storedetails/:id" element={<StoreDetails />} /> */}
-        {/* <Route path="/deletestore/:id" element={<Deletestore />} /> */}
+        <Route path="/deletestore/:id" element={<DeleteStore />} />
         {/* <Route path="/inventory" element={<InventoryList />} /> */}
       </Route>
      </Routes>
