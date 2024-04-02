@@ -7,6 +7,37 @@ import axios from "axios";
 
 
 function Deletestore() {
+  const { id } = useParams();
+  const [storeName, setStoreName ] = useState();
+   
+  useEffect(() => {
+    axios 
+      .get(`http://localhost:5050/api/warehouses` + id)
+      .then((response) => {
+        setStoreName(response.data[1].store_name);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  function handleDeleteClick() {
+    const urlId = `http://localhost:5050/api/warehouses` + id;
+    axios 
+    .delete(urlId)
+    .then((response) => {
+      alert("Store deleted succesfully");
+      window.location.replace("/");
+    })
+    .catch((error) => {
+      console.log(error);
+      alert("Store deletion failed", error);
+    });
+  }
+
+  function handleCancelClick() {
+    window.location.replace("/");
+  }
 return (
     <main className="store__main">
       <div className="store">
@@ -16,7 +47,7 @@ return (
               className="store__icon"
               src={close}
               alt="close-icon"
-            //   onClick={handleCancelClick}
+              onClick={handleCancelClick}
             />
           </div>
           <h1 className="store__heading">
@@ -31,13 +62,13 @@ return (
         <div className="store__button-container">
           <button
             className="store__button store__button--1"
-            // onClick={handleCancelClick}
+            onClick={handleCancelClick}
           >
             Cancel
           </button>
           <button
             className="store__button store__button--2"
-            // onClick={handleDeleteClick}
+            onClick={handleDeleteClick}
           >
             Delete
           </button>
