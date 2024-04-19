@@ -149,11 +149,11 @@ function StoreList() {
                     className="stores-content__links"
                     to={`/deletestore/${item.id}`}
                   ><img src={Delete} alt="delete" /></Link> 
-{/* 
+
                  <Link
                     className="stores-content__links"
                     to={`/editstore/${item.id}`}
-                  ><img src={Edit} alt="edit" /></Link>  */}
+                  ><img src={Edit} alt="edit" /></Link>  
               </div>
 
             </div>
