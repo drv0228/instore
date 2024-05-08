@@ -8,7 +8,7 @@ import axios from "axios";
 function EditStore() {
   const { idFromParams } = useParams();
 
-  const [store_name, setName] = useState("");
+  const [warehouse_name, setName] = useState("");
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
@@ -32,7 +32,7 @@ function EditStore() {
     const newErrors = {}; //empty object to store validation error messages for all the different form fields.
 
     //Check if the fields are all filled (non-empty)
-    if (!store_name) newErrors.store_name = "This field is required";
+    if (!warehouse_name) newErrors.store_name = "This field is required";
     if (!address) newErrors.address = "This field is required";
     if (!city) newErrors.city = "This field is required";
     if (!country) newErrors.country = "This field is required";
@@ -63,7 +63,7 @@ function EditStore() {
     if (isFormValid()) {
       // Prepare data submission - sending to database (server)
       const storeData = {
-        store_name,
+        warehouse_name,
         address,
         city,
         country,
@@ -75,7 +75,7 @@ function EditStore() {
       //Send the data to the server using the axios library's PUT method to update data on the server
       axios
         .put(
-          `http://localhost:5050/api/warehouses` + idFromParams,
+          `http://localhost:5050/api/warehouses/` + idFromParams,
           storeData
         )
         .then((response) => {
@@ -123,7 +123,7 @@ function EditStore() {
                   name="store_name"
                   id="name"
                   placeholder="Washington"
-                  value={store_name}
+                  value={warehouse_name}
                   onChange={(e) => setName(e.target.value)}
                   className={`edit-store__input ${
                     hasError("store_name")

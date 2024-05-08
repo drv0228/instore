@@ -12,6 +12,8 @@ import Sort from "../../assets/images/sort-24px.svg";
 
 function StoreList() {
   const url = `http://localhost:5050/api/warehouses`;
+  //  const url = `http:// instore-server.up.railway.app/api/warehouses`;
+ 
   const storesUrl = `${url}`;
 
   const [contentItems, setContentItems] = useState([]);

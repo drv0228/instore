@@ -12,9 +12,9 @@ function Deletestore() {
    
   useEffect(() => {
     axios 
-      .get(`http://localhost:5050/api/warehouses` + id)
+      .get(`http://localhost:5050/api/warehouses/` + id)
       .then((response) => {
-        setStoreName(response.data[1].store_name);
+        setStoreName(response.data[1].warehouse_name);
       })
       .catch((error) => {
         console.log(error);
@@ -22,7 +22,7 @@ function Deletestore() {
   }, []);
 
   function handleDeleteClick() {
-    const urlId = `http://localhost:5050/api/warehouses` + id;
+    const urlId = `http://localhost:5050/api/warehouses/` + id;
     axios 
     .delete(urlId)
     .then((response) => {
