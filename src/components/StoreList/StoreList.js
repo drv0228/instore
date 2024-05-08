@@ -8,19 +8,16 @@ import Edit from "../../assets/images/edit-24px.svg";
 import Arrow from "../../assets/images/chevron_right-24px.svg";
 import Sort from "../../assets/images/sort-24px.svg";
 
-
-
 function StoreList() {
   const url = `http://localhost:5050/api/warehouses`;
   //  const url = `http:// instore-server.up.railway.app/api/warehouses`;
- 
+
   const storesUrl = `${url}`;
 
   const [contentItems, setContentItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
 
   useEffect(() => {
- 
     getAndDisplayStores();
   }, []);
 
@@ -88,7 +85,7 @@ function StoreList() {
               }`}
               onClick={() => handleStoresClick(index)}
             >
-  <div className="stores-content__list-store--rows">
+              <div className="stores-content__list-store--rows">
                 <div className="stores-content__list-store--columns">
                   <div className="stores-content__list-store--title">
                     <p>STORE</p>
@@ -96,14 +93,14 @@ function StoreList() {
                   {/* <Link
                     className="stores-content__links"
                     to={`/storedetails/${item.id}`}
-                  > */}
-                  <div className="stores-content__list-store--name">
-                    <p className="stores-content__list-store--name-layout">
-                      {item.warehouse_name}
-                      <img src={Arrow} alt="arrow" />
-                    </p>
-                  </div>
-                  {/* </Link> */}
+                  >
+                    <div className="stores-content__list-store--name">
+                      <p className="stores-content__list-store--name-layout">
+                        {item.warehouse_name}
+                        <img src={Arrow} alt="arrow" />
+                      </p>
+                    </div>
+                  </Link> */}
                 </div>
                 <div className="stores-content__list-store--columns-2">
                   <div className="stores-content__list-store--title">
@@ -147,17 +144,20 @@ function StoreList() {
               </div>
 
               <div className="stores-content__list-store--actions">
-              <Link
-                    className="stores-content__links"
-                    to={`/deletestore/${item.id}`}
-                  ><img src={Delete} alt="delete" /></Link> 
+                <Link
+                  className="stores-content__links"
+                  to={`/deletestore/${item.id}`}
+                >
+                  <img src={Delete} alt="delete" />
+                </Link>
 
-                 <Link
-                    className="stores-content__links"
-                    to={`/editstore/${item.id}`}
-                  ><img src={Edit} alt="edit" /></Link>  
+                <Link
+                  className="stores-content__links"
+                  to={`/editstore/${item.id}`}
+                >
+                  <img src={Edit} alt="edit" />
+                </Link>
               </div>
-
             </div>
           ))}
         </div>

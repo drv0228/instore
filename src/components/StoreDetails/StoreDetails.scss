@@ -1,0 +1,160 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+
+.store-details-wrap {
+  background: linear-gradient(#232940 4.125rem, #f7f8f9 3.75rem, #f7f8f9 85%);
+  @include tablet {
+    background: linear-gradient(
+      #232940 6.5625rem,
+      #f7f8f9 3.75rem,
+      #f7f8f9 85%
+    );
+  }
+}
+
+#store-details {
+  font-family: "Titillium Web", sans-serif;
+  margin: 1rem;
+  border-radius: 0.1875rem;
+  background: var(--white, #fff);
+  box-shadow: 0 0.125rem 0.3125rem 0 rgba(19, 24, 44, 0.1);
+  margin-bottom: 0;
+  border-bottom: #bdc5d5 0.0625rem solid;
+  margin-top: 0;
+
+  @include tablet {
+    margin: 1rem;
+    border-radius: 0.1875rem;
+    margin-bottom: 0;
+    border-bottom: none;
+    margin: 0 2.5rem;
+    @include desktop {
+      margin: 1rem 0 1rem 5rem;
+      margin-bottom: 0;
+      margin: 0 8.125rem;
+    }
+  }
+}
+
+.store-details__h1-container {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  justify-content: space-between;
+  margin-right: 1rem;
+  @include tablet {
+    padding: 0 2rem;
+  }
+  @include desktop {
+    padding: 0 2.5rem;
+  }
+}
+.store-details__h1 {
+  padding-left: 0.5rem;
+  margin: 2rem 0;
+  @include font-m-h1-page-header;
+  @include tablet {
+    @include font-h1-page-header;
+  }
+}
+
+.store-details__back-button {
+  display: flex;
+  margin-right: 0.5rem;
+}
+
+.store-details__edit-button {
+  background-color: $primary-instock-indigo;
+  border-radius: 1.25rem;
+  padding: 0.5rem;
+  @include tablet {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.store-details__h4 {
+  @include font-m-h4-table-header;
+  font-weight: 600;
+  color: $secondary-slate;
+  margin-bottom: 0.25rem;
+  @include tablet {
+    @include font-h4-table-header;
+  }
+}
+
+.store-details__p2 {
+  @include font-m-p2-body-medium;
+  color: $primary-instock-black;
+  margin-top: 0rem;
+  margin-bottom: 0;
+  @include tablet {
+    @include font-p2-body-medium;
+  }
+}
+
+.store-details__contact-container {
+  display: flex;
+  padding-top: 1rem;
+
+  @include tablet {
+    padding-right: 4rem;
+  }
+  @include desktop {
+    padding-left: 4rem;
+  }
+}
+
+#contact-name {
+  margin-right: 2rem;
+  @include desktop {
+    margin-right: 9rem;
+  }
+}
+
+.line {
+  border-bottom: 0.0625rem solid $secondary-cloud;
+}
+
+.store-details__details-container {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+  }
+  @include desktop {
+    justify-content: flex-start;
+    padding-left: 2.5rem;
+  }
+}
+
+.store-details__address-container {
+  padding-right: 1rem;
+  @include tablet {
+    align-self: center;
+  }
+}
+
+#container-border {
+  @include tablet {
+    border-right: 0.0625rem solid $secondary-cloud;
+    align-self: flex-end;
+    padding-right: 4rem;
+  }
+
+  @include desktop {
+    padding-right: 13rem;
+  }
+}
+
+.store-details__p-container {
+  display: flex;
+  @include tablet {
+    flex-direction: column;
+  }
+}
+.store-details__p2 {
+  display: flex;
+}
