@@ -90,7 +90,7 @@ function StoreList() {
                   <div className="stores-content__list-store--title">
                     <p>STORE</p>
                   </div>
-                  {/* <Link
+                  <Link
                     className="stores-content__links"
                     to={`/storedetails/${item.id}`}
                   >
@@ -100,7 +100,7 @@ function StoreList() {
                         <img src={Arrow} alt="arrow" />
                       </p>
                     </div>
-                  </Link> */}
+                  </Link>
                 </div>
                 <div className="stores-content__list-store--columns-2">
                   <div className="stores-content__list-store--title">
