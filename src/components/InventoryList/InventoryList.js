@@ -6,7 +6,8 @@ import Delete from "../../assets/images/delete_outline-24px.svg";
 import Edit from "../../assets/images/edit-24px.svg";
 import Arrow from "../../assets/images/chevron_right-24px.svg";
 import Sort from "../../assets/images/sort-24px.svg";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 function InventoryList() {
   const inventoriesUrl = `http://localhost:5050/api/inventories`;
 
@@ -153,14 +154,15 @@ function InventoryList() {
               </div>
 
               <div className="inventories-content__list-inventory--actions">
-                {/* <Link to={`/deleteinventory/${item.id}`}>
+                <Link to={`/deleteinventory/${item.id}`}>
                   {" "}
-                  <img src={Delete} alt="delete" />
-                </Link>{" "}
-                <Link to={`/edititem/${item.id}`}>
+                  <img src={Delete} alt="delete icon" />
+                </Link>
+
+                {/* <Link to={`/edititem/${item.id}`}>
                   {" "}
                   <img src={Edit} alt="edit" />
-                </Link> */}
+                </Link>  */}
               </div>
             </div>
           ))}
