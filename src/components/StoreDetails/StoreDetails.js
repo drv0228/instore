@@ -1,11 +1,11 @@
 import React from "react";
 import axios from "axios";
 import "./StoreDetails.scss";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import backLogo from "../../assets/images/arrow_back-24px.svg";
 import editButton from "../../assets/images/edit-24px-white.svg";
-// import StoreInventoryList from "../StoreInventoryList/InventoryList.js";
+import StoreInventoryList from "../StoreInventoryList/StoreInventoryList.js";
 
 function StoreDetails() {
   const [details, setDetails] = useState([]);
@@ -37,7 +37,7 @@ function StoreDetails() {
           <section id="store-details">
             <section className="store-details__h1-container">
               <div className="store-details__back-button">
-                <img src={backLogo} alt="back button" />
+               <Link className="store-details_back" to={`/`} ><img src={backLogo} alt="back button" /></Link>
                 <h1 className="store-details__h1">
                   {details[0].warehouse_name}
                 </h1>
@@ -93,7 +93,7 @@ function StoreDetails() {
               </div>
             </section>
           </section>
-          {/* <StoreInventoryList /> */}
+          <StoreInventoryList />
         </section>
       </>
     );

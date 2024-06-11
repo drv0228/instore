@@ -35,6 +35,10 @@
       margin: 0 8.125rem;
     }
   }
+  &_back {
+   position: absolute;
+   top: -10;
+  }
 }
 
 .store-details__h1-container {

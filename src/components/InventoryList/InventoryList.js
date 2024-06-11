@@ -90,17 +90,17 @@ function InventoryList() {
                   <div className="inventories-content__list-inventory--title">
                     <p>INVENTORY ITEM</p>
                   </div>
-                  {/* <Link
+                  <Link
                     className="inventories__links"
                     to={`/itemdetails/${item.id}`}
-                  > */}
+                  >
                     <div className="inventories-content__list-inventory--item-name">
                       <p className="inventories-content__list-inventory--item-name-layout">
                         {item.item_name}
                         <img src={Arrow} alt="arrow" />
                       </p>
                     </div>
-                  {/* </Link> */}
+                  </Link>
                 </div>
                 <div className="inventories-content__list-inventory--columns-2">
                   <div className="inventories-content__list-inventory--title">
