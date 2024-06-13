@@ -36,8 +36,10 @@ function InventoryList() {
   return (
     <div className="inventories">
       <div className="inventories-content">
+
         <div className="inventories-content__nav">
           <h1 className="inventories-content__nav--title">Inventory</h1>
+          
           <div className="inventories-content__nav--search">
             <input
               type="search"
@@ -47,11 +49,12 @@ function InventoryList() {
             />{" "}
             <img src={Search} alt="search" />
           </div>
+
           {/* <Link className="inventories__links" to={`/addinventory`}> */}
-            <button className="inventories-content__nav--button">
-              {" "}
-              + Add New Item{" "}
-            </button>
+          <button className="inventories-content__nav--button">
+            {" "}
+            + Add New Item{" "}
+          </button>
           {/* </Link> */}
         </div>
 
@@ -75,6 +78,7 @@ function InventoryList() {
         </div>
 
         <div className="inventories-content__list">
+
           {inventoriesItems.map((item, index) => (
             <div
               key={index}
@@ -85,11 +89,13 @@ function InventoryList() {
               }`}
               onClick={() => handleInventoriesClick(index)}
             >
+
               <div className="inventories-content__list-inventory--rows">
                 <div className="inventories-content__list-inventory--columns">
                   <div className="inventories-content__list-inventory--title">
                     <p>INVENTORY ITEM</p>
                   </div>
+
                   <Link
                     className="inventories__links"
                     to={`/itemdetails/${item.id}`}
@@ -102,10 +108,12 @@ function InventoryList() {
                     </div>
                   </Link>
                 </div>
+
                 <div className="inventories-content__list-inventory--columns-2">
                   <div className="inventories-content__list-inventory--title">
                     <p>STATUS</p>
                   </div>
+
                   <div
                     className={`inventories-content__list-inventory--status ${
                       item.status === "In Stock" ? "in-stock" : "out-of-stock"
@@ -116,30 +124,39 @@ function InventoryList() {
                   <div className="inventories-content__list-inventory--category-tablet">
                     <p>{item.category}</p>
                   </div>
+
                 </div>
               </div>
 
               <div className="inventories-content__list-inventory--rows">
                 <div className="inventories-content__list-inventory--columns">
+
                   <div className="inventories-content__list-inventory--title">
                     <p>CATEGORY</p>
                   </div>
+
                   <div className="inventories-content__list-inventory--category">
                     <p>{item.category}</p>
                   </div>
-                  <div
+
+                
+
+                </div>
+
+                <div
                     className={`inventories-content__list-inventory--status-tablet ${
                       item.status === "In Stock" ? "in-stock" : "out-of-stock"
                     }`}
                   >
                     <p>{item.status}</p>
                   </div>
-                </div>
 
                 <div className="inventories-content__list-inventory--columns-tablet">
+
                   <div className="inventories-content__list-inventory--title">
                     <p>QTY</p>
                   </div>
+
                   <div className="inventories-content__list-inventory--quantity">
                     <p>{item.quantity}</p>
                   </div>
@@ -147,10 +164,13 @@ function InventoryList() {
                   <div className="inventories-content__list-inventory--title">
                     <p>STORE</p>
                   </div>
+
                   <div className="inventories-content__list-inventory--warehouse">
                     <p>{item.warehouse_name}</p>
                   </div>
+
                 </div>
+
               </div>
 
               <div className="inventories-content__list-inventory--actions">
@@ -164,6 +184,7 @@ function InventoryList() {
                   <img src={Edit} alt="edit" />
                 </Link>  */}
               </div>
+              
             </div>
           ))}
         </div>

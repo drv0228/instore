@@ -9,7 +9,7 @@ import DeleteStore from "./components/DeleteStore/DeleteStore.js";
 import EditStore from "./components/EditStore/EditStore.js";
 import InventoryList from "./components/InventoryList/InventoryList.js";
 import Deleteinventory from "./components/DeleteInventory/DeleteInventory.js";
-import ItemDetails from "./components/ItemDetails.com/ItemDetails.js";
+import ItemDetails from "./components/ItemDetails/ItemDetails.js";
 
 function App() {
   return (
