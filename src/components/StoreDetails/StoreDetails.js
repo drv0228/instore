@@ -20,7 +20,7 @@ function StoreDetails() {
       .catch((error) => {
         console.log("axios call failed", error);
       });
-  }, []);
+  }, );
 
   if (details.length === 0) {
     return (
@@ -30,20 +30,27 @@ function StoreDetails() {
     );
   } else {
     let inStock;
-    details[0].quantity != 0 ? (inStock = true) : (inStock = false);
+    details[0].quantity !== 0 ? (inStock = true) : (inStock = false);
     return (
       <>
         <section className="store-details-wrap">
           <section id="store-details">
             <section className="store-details__h1-container">
               <div className="store-details__back-button">
-               <Link className="store-details_back" to={`/`} ><img src={backLogo} alt="back button" /></Link>
+                <Link className="store-details_back" to={`/`}>
+                  <img src={backLogo} alt="back button" />
+                </Link>
                 <h1 className="store-details__h1">
                   {details[0].warehouse_name}
                 </h1>
               </div>
               <div className="store-details__edit-button">
-                <img src={editButton} alt="button used to edit one item" />
+                <Link
+                  className="stores-content__links"
+                  to={`/editstore/${id}`}
+                >
+                  <img src={editButton} alt="button used to edit one item" />
+                </Link>
               </div>
             </section>
             <div className="line"></div>
