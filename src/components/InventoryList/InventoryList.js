@@ -16,7 +16,7 @@ function InventoryList() {
 
   useEffect(() => {
     getAndDisplayInventories();
-  }, []);
+  }, );
 
   const getAndDisplayInventories = () => {
     axios
@@ -179,10 +179,10 @@ function InventoryList() {
                   <img src={Delete} alt="delete icon" />
                 </Link>
 
-                {/* <Link to={`/edititem/${item.id}`}>
+                <Link to={`/edititem/${item.id}`}>
                   {" "}
                   <img src={Edit} alt="edit" />
-                </Link>  */}
+                </Link>  
               </div>
               
             </div>

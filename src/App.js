@@ -10,6 +10,7 @@ import EditStore from "./components/EditStore/EditStore.js";
 import InventoryList from "./components/InventoryList/InventoryList.js";
 import Deleteinventory from "./components/DeleteInventory/DeleteInventory.js";
 import ItemDetails from "./components/ItemDetails/ItemDetails.js";
+import EditItem from "./components/EditItem/EditItem.js";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/inventory" element={<InventoryList />} />
             <Route path="/deleteinventory/:id" element={<Deleteinventory />} />
             <Route path="/itemdetails/:id" element={<ItemDetails />} />
+            <Route path="/edititem/:id" element={<EditItem />} />
           </Route>
         </Routes>
         <Footer />

@@ -1,0 +1,238 @@
+@use "../../styles/partials/__variables" as *;
+@use "../../styles/partials/__mixins" as *;
+@use "../../styles/partials/__typography";
+
+.edit-item {
+  font-family: "Titillium Web", sans-serif;
+  background: linear-gradient(
+    $background-graphite 7.5%,
+    $background-light-grey 7.5%,
+    $background-light-grey 92.5%
+  );
+  @include tablet {
+    background: linear-gradient(
+      $background-graphite 14.75%,
+      $background-light-grey 14.75%,
+      $background-light-grey 85.25%
+    );
+  }
+
+  &__page {
+    background: $primary-white;
+    border-radius: 0.1875rem;
+    box-shadow: 0px 2px 5px 0px rgba(19, 24, 44, 0.1);
+    margin: 0 1rem;
+    @include tablet {
+      margin: 0 2rem;
+    }
+    @include desktop {
+      margin: 0 8.125rem;
+    }
+  }
+  &__header {
+    padding: 2rem 0 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    @include tablet {
+      margin-bottom: 2rem;
+      border-bottom: 0.0625rem solid $secondary-cloud;
+      padding: 2rem 0 1.325rem 2rem;
+    }
+    @include desktop {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__title {
+    margin-left: 0.5rem;
+    color: $primary-instock-black;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    @include font-m-h1-page-header;
+    @include tablet {
+      @include font-h1-page-header;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__details {
+    border-top: 0.0625rem solid $secondary-cloud;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem 0 1.5rem;
+    @include tablet {
+      width: 50%;
+      padding: 0 2rem;
+      border-top: none;
+    }
+    @include desktop {
+      width: 50%;
+      padding: 0 2.5rem;
+      border-top: none;
+    }
+    &--border {
+      @include tablet {
+        border-left: 0.0625rem solid $secondary-cloud;
+      }
+    }
+  }
+  &__subheading {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-bottom: 1rem;
+    @include font-m-h2-subheader;
+    @include tablet {
+      @include font-h2-subheader;
+      padding-bottom: 1.5rem;
+    }
+    @include desktop {
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.875rem;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    color: $primary-instock-black;
+    margin-top: 0;
+    @include font-m-h3-labels-links-buttons;
+    @include tablet {
+      margin-top: 0.5rem;
+      @include font-h3-labels-links-buttons;
+    }
+    span {
+      height: 1rem;
+      @include tablet {
+        height: 1.125rem;
+      }
+    }
+  }
+  &__input {
+    margin-top: 0.25rem;
+    border-radius: 1.25rem;
+    border: 1px solid $secondary-cloud;
+    color: $secondary-slate;
+
+    padding: 0rem 1rem;
+    height: 9.25vw;
+    @include font-m-p2-body-medium;
+    &:focus {
+      color: $primary-instock-black;
+      border-color: $primary-instock-indigo;
+    }
+    &--error {
+      border-color: $supporting-red;
+    }
+
+    @include tablet {
+      @include font-p2-body-medium;
+      height: 4.948vw;
+    }
+    @include desktop {
+      height: 2.969vw;
+    }
+  }
+  &__textarea {
+    font-family: "Titillium Web", sans-serif;
+    margin-top: 0.25rem;
+    border-radius: 1.25rem;
+    border: 1px solid $secondary-cloud;
+    color: $secondary-slate;
+    padding: 1rem 1rem;
+    height: 9.25vw;
+    @include font-m-p2-body-medium;
+    &:focus {
+      color: $primary-instock-black;
+      border-color: $primary-instock-indigo;
+    }
+    &--error {
+      border-color: $supporting-red;
+    }
+
+    @include tablet {
+      @include font-p2-body-medium;
+    }
+  }
+  &__error-message {
+    color: $supporting-red;
+    padding-left: 1.5rem;
+    @include font-m-p3-body-small;
+    background-image: url("../../assets/images/error-24px.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    @include font-p3-body-small;
+  }
+  &__buttons {
+    border-radius: 0 0 0.1875rem 0.1875rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: $background-light-grey;
+    // border-top: 0.0625rem solid $secondary-cloud;
+    @include tablet {
+      padding: 1rem 2rem;
+      justify-content: flex-end;
+      margin-top: 1rem;
+    }
+    @include desktop {
+      padding: 1rem 2.5rem;
+    }
+  }
+  &__button-cancel {
+    padding: 0.5rem 1rem;
+    border-radius: 1.25rem;
+    background-color: $primary-white;
+    color: $secondary-slate;
+    text-align: center;
+    border: 1px solid $secondary-cloud;
+    width: 50%;
+    @include font-m-h3-labels-links-buttons;
+    &:hover {
+      color: $primary-instock-indigo;
+      border-color: $primary-instock-indigo;
+    }
+    height: 11.25vw;
+    @include tablet {
+      width: 13%;
+      height: 4.948vw;
+      @include font-h3-labels-links-buttons;
+    }
+    @include desktop {
+      width: 9%;
+      height: 2.969vw;
+    }
+  }
+  &__button-save {
+    width: 50%;
+    padding: 0.5rem 1rem;
+    border-radius: 1.25rem;
+    background-color: $primary-instock-indigo;
+    color: $primary-white;
+    text-align: center;
+    border: none;
+    @include font-m-h3-labels-links-buttons;
+    &:hover {
+      background-color: $background-graphite;
+    }
+    height: 11.25vw;
+    @include tablet {
+      width: 11%;
+      @include font-h3-labels-links-buttons;
+      height: 4.948vw;
+    }
+    @include desktop {
+      width: 7%;
+      height: 2.969vw;
+    }
+  }
+}
