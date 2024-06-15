@@ -263,7 +263,7 @@ if (storeArray.length !== 0 && store_id !== "") {
                             </div>
                         )}
 
-                        <label htmlFor="store">Warehouse:</label>
+                        <label htmlFor="store">Store:</label>
                         <select
                             id="store"
                             name="store"

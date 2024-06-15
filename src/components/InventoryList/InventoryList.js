@@ -50,12 +50,12 @@ function InventoryList() {
             <img src={Search} alt="search" />
           </div>
 
-          {/* <Link className="inventories__links" to={`/addinventory`}> */}
+          <Link className="inventories__links" to={`/addinventory`}>
           <button className="inventories-content__nav--button">
             {" "}
             + Add New Item{" "}
           </button>
-          {/* </Link> */}
+          </Link>
         </div>
 
         <div className="inventories-content__titles">
