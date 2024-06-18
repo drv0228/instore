@@ -12,17 +12,17 @@ function Deleteinventory() {
 
   useEffect(() => {
     axios
-      .get(`https://localhost:5050/api/inventories/` + id)
+      .get(`http://localhost:5050/api/inventories/` + id)
       .then((response) => {
         setInventoryName(response.data[0].item_name);
       })
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  },);
 
   function handleDeleteClick() {
-    const url = "https://localhost:5050/api/inventories/" + id;
+    const url = "http://localhost:5050/api/inventories/" + id;
     axios
       .delete(url)
       .then((response) => {
