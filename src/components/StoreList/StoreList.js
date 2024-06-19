@@ -16,6 +16,7 @@ function StoreList() {
 
   const [contentItems, setContentItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [sortOrder, setSortOrder] = useState("asc");
 
   useEffect(() => {
     getAndDisplayStores();
@@ -30,6 +31,21 @@ function StoreList() {
       .catch((error) => {
         console.log("got error calling API", error);
       });
+  };
+
+  const sortItems = (key) => {
+    const sortedItems = [...contentItems].sort((a, b) => {
+      const itemA = a[key].toUpperCase();
+      const itemB = b[key].toUpperCase();
+      if (sortOrder === "asc") {
+        return itemA < itemB ? -1 : itemA > itemB ? 1 : 0;
+      } else {
+        return itemA > itemB ? -1 : itemA < itemB ? 1 : 0;
+      }
+    });
+   
+    setContentItems(sortedItems);
+    setSortOrder(sortOrder === "asc" ? "desc" : "asc");
   };
 
   const handleStoresClick = (index) => {
@@ -59,13 +75,13 @@ function StoreList() {
         </div>
 
         <div className="stores-content__titles">
-          <p className="stores-content__titles--store">
+          <p className="stores-content__titles--store" onClick={() => sortItems('warehouse_name')}>
             STORE <img src={Sort} alt="sort arrows" />{" "}
           </p>
           <p className="stores-content__title--address">
             ADDRESS <img src={Sort} alt="sort arrows" />{" "}
           </p>
-          <p className="stores-content__titles--contact-name">
+          <p className="stores-content__titles--contact-name" onClick={() => sortItems('contact_name')}>
             CONTACT NAME <img src={Sort} alt="sort arrows" />{" "}
           </p>
           <p className="stores-content__titles--contact-info">

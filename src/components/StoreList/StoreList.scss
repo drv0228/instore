@@ -143,6 +143,7 @@
         }
 
         &--store{
+            cursor: pointer;
             @include tablet{
             display: flex;
             align-items: center;
@@ -161,6 +162,7 @@
             }    
         }
         &--contact-name{
+            cursor: pointer;
             @include tablet{
             display: flex;
             align-items: center;
