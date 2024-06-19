@@ -54,6 +54,7 @@
         }
 
         &--title {
+
             @include font-m-h1-page-header ;
             padding: .75rem 0;
             margin: 0;
@@ -139,6 +140,7 @@
         }
 
         &--inventory-item{
+            cursor: pointer;
             @include tablet{
             display: flex;
             align-items: center;
@@ -149,6 +151,7 @@
             }
         }
         &--category{
+            cursor: pointer;
             @include tablet{
             display: flex;
             align-items: center; 
@@ -160,6 +163,7 @@
             }    
         }
         &--status{
+            cursor: pointer;
             @include tablet{
             display: flex;
             align-items: center;
@@ -181,6 +185,7 @@
             }
         }
         &--store{
+            cursor: pointer;
             @include tablet{
             display: flex;
             align-items: center;

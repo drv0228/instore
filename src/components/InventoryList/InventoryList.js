@@ -34,10 +34,10 @@ function InventoryList() {
     setSelectedInventoriesItem(index);
   };
 
-  const sortItems = () => {
+  const sortItems = (key) => {
     const sortedItems = [...inventoriesItems].sort((a, b) => {
-      const itemA = a.item_name.toUpperCase();
-      const itemB = b.item_name.toUpperCase();
+      const itemA = a[key].toUpperCase();
+      const itemB = b[key].toUpperCase();
       if (sortOrder === "asc") {
         return itemA < itemB ? -1 : itemA > itemB ? 1 : 0;
       } else {
@@ -75,19 +75,19 @@ function InventoryList() {
         </div>
 
         <div className="inventories-content__titles">
-          <p className="inventories-content__titles--inventory-item" onClick={sortItems}>
+          <p className="inventories-content__titles--inventory-item" onClick={() => sortItems('item_name')}>
             INVENTORY ITEM <img src={Sort} alt="sort arrows" />{" "}
           </p>
-          <p className="inventories-content__titles--category">
+          <p className="inventories-content__titles--category" onClick={() => sortItems('category')}>
             CATEGORY <img src={Sort} alt="sort arrows" />{" "}
           </p>
-          <p className="inventories-content__titles--status">
+          <p className="inventories-content__titles--status" onClick={() => sortItems('status')}>
             STATUS <img src={Sort} alt="sort arrows" />{" "}
           </p>
           <p className="inventories-content__titles--quantity">
             QTY <img src={Sort} alt="sort arrows" />{" "}
           </p>
-          <p className="inventories-content__titles--store">
+          <p className="inventories-content__titles--store" onClick={() => sortItems('warehouse_name')}>
             STORE <img src={Sort} alt="sort arrows" />{" "}
           </p>
           <p className="inventories-content__titles--actions">ACTIONS</p>
