@@ -13,10 +13,11 @@ function InventoryList() {
 
   const [inventoriesItems, setInventoriesItems] = useState([]);
   const [selectedInventoriesItem, setSelectedInventoriesItem] = useState(null);
+  const [sortOrder, setSortOrder] = useState("asc");
 
   useEffect(() => {
     getAndDisplayInventories();
-  }, );
+  }, []);
 
   const getAndDisplayInventories = () => {
     axios
@@ -31,6 +32,21 @@ function InventoryList() {
 
   const handleInventoriesClick = (index) => {
     setSelectedInventoriesItem(index);
+  };
+
+  const sortItems = () => {
+    const sortedItems = [...inventoriesItems].sort((a, b) => {
+      const itemA = a.item_name.toUpperCase();
+      const itemB = b.item_name.toUpperCase();
+      if (sortOrder === "asc") {
+        return itemA < itemB ? -1 : itemA > itemB ? 1 : 0;
+      } else {
+        return itemA > itemB ? -1 : itemA < itemB ? 1 : 0;
+      }
+    });
+   
+    setInventoriesItems(sortedItems);
+    setSortOrder(sortOrder === "asc" ? "desc" : "asc");
   };
 
   return (
@@ -59,7 +75,7 @@ function InventoryList() {
         </div>
 
         <div className="inventories-content__titles">
-          <p className="inventories-content__titles--inventory-item">
+          <p className="inventories-content__titles--inventory-item" onClick={sortItems}>
             INVENTORY ITEM <img src={Sort} alt="sort arrows" />{" "}
           </p>
           <p className="inventories-content__titles--category">
