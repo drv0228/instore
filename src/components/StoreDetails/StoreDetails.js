@@ -20,7 +20,7 @@ function StoreDetails() {
       .catch((error) => {
         console.log("axios call failed", error);
       });
-  }, );
+  });
 
   if (details.length === 0) {
     return (
@@ -45,10 +45,7 @@ function StoreDetails() {
                 </h1>
               </div>
               <div className="store-details__edit-button">
-                <Link
-                  className="stores-content__links"
-                  to={`/editstore/${id}`}
-                >
+                <Link className="stores-content__links" to={`/editstore/${id}`}>
                   <img src={editButton} alt="button used to edit one item" />
                 </Link>
               </div>
@@ -59,13 +56,14 @@ function StoreDetails() {
                 className="store-details__address-container "
                 id="container-border"
               >
-                <h4 className="store-details__h4">store ADDRESS:</h4>
+                <h4 className="store-details__h4">STORE ADDRESS:</h4>
                 <div className="store-details__p-container">
                   <p className="store-details__p2" id="smaller-width">
-                    {details[0].address}
+                    {details[0].address},&nbsp;
                   </p>
                   <div className="p-details-div">
-                    <p className="store-details__p2"> {details[0].city}</p>
+                   
+                    <p className="store-details__p2">{details[0].city}</p>
                     <p className="store-details__p2">{details[0].state}</p>
                   </div>
                 </div>

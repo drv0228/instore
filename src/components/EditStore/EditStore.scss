@@ -9,6 +9,7 @@
     $background-light-grey 9%,
     $background-light-grey 91%
   );
+  padding-top: 2rem;
   height: auto;
   @include tablet {
     background: linear-gradient(
@@ -51,7 +52,7 @@
     margin-block-start: 0;
     margin-block-end: 0;
     @include font-m-h1-page-header;
-    font-size: 1.35rem;
+    font-size: 2rem;
     @include tablet {
       @include font-h1-page-header;
     }
@@ -156,7 +157,7 @@
   }
   &__buttons {
     border-radius: 0 0 0.1875rem 0.1875rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -173,19 +174,18 @@
     }
   }
   &__button-cancel {
-    padding: 0.5rem 1rem;
+    padding: .4rem 3.5rem;
     border-radius: 1.25rem;
     background-color: $primary-white;
     color: $secondary-slate;
     text-align: center;
     border: 1px solid $secondary-cloud;
-    width: 33vw;
+    
     @include font-m-h3-labels-links-buttons;
     &:hover {
       color: $primary-instock-indigo;
       border-color: $primary-instock-indigo;
     }
-    height: 11.25vw;
     @include tablet {
       width: 11vw;
       height: 4.948vw;
@@ -197,8 +197,7 @@
     }
   }
   &__button-save {
-    width: 33vw;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 3.5rem;
     border-radius: 1.25rem;
     background-color: $primary-instock-indigo;
     color: $primary-white;
@@ -208,7 +207,6 @@
     &:hover {
       background-color: $background-graphite;
     }
-    height: 11.25vw;
     @include tablet {
       width: 9vw;
       @include font-h3-labels-links-buttons;

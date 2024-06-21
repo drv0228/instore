@@ -9,6 +9,7 @@
     $background-light-grey 7.5%,
     $background-light-grey 92.5%
   );
+  padding-top: 1rem;
   height: auto;
   @include tablet {
     background: linear-gradient(
@@ -50,7 +51,7 @@
     margin-block-start: 0;
     margin-block-end: 0;
     @include font-m-h1-page-header;
-    font-size: 1.35rem;
+    font-size: 1.8rem;
     @include tablet {
       @include font-h1-page-header;
     }
@@ -171,19 +172,18 @@
     }
   }
   &__button-cancel {
-    padding: 0.5rem 1rem;
+    padding: .5rem 3rem;
     border-radius: 1.25rem;
     background-color: $primary-white;
     color: $secondary-slate;
     text-align: center;
+    margin-right: .5rem;
     border: 1px solid $secondary-cloud;
-    width: 33vw;
     @include font-m-h3-labels-links-buttons;
     &:hover {
       color: $primary-instock-indigo;
       border-color: $primary-instock-indigo;
     }
-    height: 11.25vw;
     @include tablet {
       width: 10.5vw;
       height: 4.948vw;
@@ -195,8 +195,7 @@
     }
   }
   &__button-add {
-    width: 40vw;
-    padding: 0.5rem 0.5rem;
+    padding: .5rem 2.5rem;
     border-radius: 1.25rem;
     background-color: $primary-instock-indigo;
     color: $primary-white;
@@ -206,7 +205,6 @@
     &:hover {
       background-color: $background-graphite;
     }
-    height: 11.25vw;
     @include tablet {
       width: 18vw;
       @include font-h3-labels-links-buttons;

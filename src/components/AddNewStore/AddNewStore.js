@@ -120,7 +120,7 @@ function AddNewStore() {
                 alt="Arrow back"
               />
             </Link>
-            <h1 className="add-store__title">Add New Warehouse</h1>
+            <h1 className="add-store__title">Add New Store</h1>
           </div>
           <form
             noValidate

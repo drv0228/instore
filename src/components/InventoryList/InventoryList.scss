@@ -41,7 +41,7 @@
     }
 
     &__nav{
-        padding: 1rem;
+        padding: 1rem 1rem .5rem 1rem;
         border-bottom: solid .0625rem $secondary-cloud;
         @include tablet {
             padding: 2rem;
@@ -56,6 +56,7 @@
         &--title {
 
             @include font-m-h1-page-header ;
+            font-size: 1.7rem;
             padding: .75rem 0;
             margin: 0;
 
@@ -69,7 +70,7 @@
             border: solid .0625rem $secondary-cloud;
             border-radius: 1.25rem;
             background-color: $primary-white;
-            height: 11.250vw;
+            height: 9.8vw;
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -102,7 +103,7 @@
             border: solid .0625rem $primary-instock-indigo;
             border-radius: 1.25rem;
             background-color:$primary-instock-indigo;
-            height: 11.250vw;
+            height: 9.8vw;
             color: $primary-white;
             width: 100%;
             margin: .75rem 0;

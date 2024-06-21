@@ -107,7 +107,7 @@ function EditStore() {
                 alt="Arrow back"
               />
             </Link>
-            <h1 className="edit-store__title">Edit Stores</h1>
+            <h1 className="edit-store__title">Edit Store</h1>
           </div>
           <form
             noValidate

@@ -14,7 +14,7 @@ function Deletestore() {
     axios 
       .get(`http://localhost:5050/api/warehouses/` + id)
       .then((response) => {
-        setStoreName(response.data[1].warehouse_name);
+        setStoreName(response.data[0].warehouse_name);
       })
       .catch((error) => {
         console.log(error);
@@ -51,12 +51,10 @@ return (
             />
           </div>
           <h1 className="store__heading">
-            Delete store?
+            Delete {storeName} store?
           </h1>
           <p className="store__paragraph">
-            Please confirm that you'd like to delete 
-            {/* {storeName}  */}
-            from the list of stores. You won't be able to undo this action.
+            Please confirm that you'd like to delete {storeName} store from the list of stores. You won't be able to undo this action.
           </p>
         </div>
         <div className="store__button-container">

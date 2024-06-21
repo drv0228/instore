@@ -8,18 +8,18 @@ import close from "../../assets/images/close-24px.svg";
 
 function Deleteinventory() {
   const { id } = useParams();
-  const [inventoryName, setInventoryName] = useState();
+  const [inventoryName, setInventoryName] = useState([]);
 
   useEffect(() => {
     axios
       .get(`http://localhost:5050/api/inventories/` + id)
       .then((response) => {
-        setInventoryName(response.data[0].item_name);
+        setInventoryName(response.data.item_name);
       })
       .catch((error) => {
         console.log(error);
       });
-  },);
+  }, []);
 
   function handleDeleteClick() {
     const url = "http://localhost:5050/api/inventories/" + id;

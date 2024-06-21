@@ -92,6 +92,8 @@
     width: 90vw;
     @include font-m-p2-body-medium;
     color: $primary-instock-black;
+    font-size: .877rem;
+    line-height: 1.65rem;
     font-style: normal;
     @include tablet {
       @include font-m-p1-body-large;
@@ -104,9 +106,8 @@
 
   &__button-container {
     display: flex;
-    margin-right: 7vw;
+    justify-content: center;
     align-items: center;
-    align-self: flex-end;
     margin-bottom: 2rem;
     @include tablet {
       justify-content: flex-end;
@@ -115,7 +116,7 @@
 
   &__button {
     display: inline-flex;
-    padding: 0.5rem 3em;
+    padding: 0.4rem 3.5rem;
     align-items: center;
     @include font-m-h3-labels-links-buttons;
     border-radius: 1.25rem;
@@ -139,7 +140,7 @@
     &--1 {
       border: 1px solid $secondary-cloud;
       background: $primary-white;
-      margin-right: 2.5rem;
+      margin-right: 1rem;
       color: $secondary-slate;
       &:hover {
         color: $primary-instock-indigo;
@@ -152,6 +153,7 @@
 
     &--2 {
       background: $supporting-red;
+      padding: 0.5rem 3.5rem;
       color: $primary-white;
       &:hover {
         background-color: $background-graphite;
