@@ -4,7 +4,9 @@
 
 .item-details {
   font-family: "Titillium Web", sans-serif;
-  margin: 1rem;
+  position: relative;
+  top: -4rem;
+  margin: 0rem 1rem 2rem 1rem;
   border-radius: 3px;
   background: var(--white, #fff);
   box-shadow: 0px 2px 5px 0px rgba(19, 24, 44, 0.1);
@@ -26,7 +28,7 @@
     }
   }
   &__bottom {
-    padding: 2rem;
+    padding: 0.5rem 1.5rem;
     @include tablet {
       display: flex;
       flex-direction: row;
@@ -39,6 +41,7 @@
     font-feature-settings: "clig" off, "liga" off;
 
     /* M H4 */
+    margin-bottom: 0.3rem;
     font-size: 11px;
     font-style: normal;
     font-weight: 600;
@@ -50,6 +53,7 @@
     font-feature-settings: "clig" off, "liga" off;
 
     /* M P2 */
+    margin: 0rem;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
@@ -83,6 +87,7 @@
   &__h1 {
     font-family: "Titillium Web", sans-serif;
     color: $primary-instock-black;
+    font-size: 1.7rem;
     font-feature-settings: "clig" off, "liga" off;
     line-height: 36px;
     padding: 0;
@@ -96,7 +101,6 @@
     }
   }
   &__right-column {
-    padding-left: 2rem;
   }
   &__quantity-title {
     color: var(--slate, #5c667e);
@@ -120,8 +124,6 @@
     line-height: 20px; /* 153.846% */
   }
   &__left-column {
-    padding-right: 2rem;
-    border-right: #bdc5d5 solid 1px;
   }
   &__status-container {
     display: flex;
@@ -147,6 +149,7 @@
     font-feature-settings: "clig" off, "liga" off;
 
     /* M H4 */
+    
     font-size: 11px;
     font-style: normal;
     font-weight: 600;
@@ -157,6 +160,7 @@
   &__status-value-red {
     font-feature-settings: "clig" off, "liga" off;
     /* M H4 */
+    text-align: center;
     font-size: 11px;
     font-style: normal;
     font-weight: 600;
@@ -167,10 +171,12 @@
     text-align: center;
   }
   &__status-value-green {
+    padding: 0.3rem;
     color: #158463;
     background: rgba(21, 132, 99, 0.07);
   }
   &__status-value-red {
+    padding: 0.3rem;
     background-color: rgba(201, 69, 21, 0.07);
     color: $supporting-red;
   }
@@ -186,17 +192,16 @@
   }
   &__top {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 1rem;
     border-bottom: #bdc5d5 1px solid;
-    padding: 2rem;
+    padding: 1.5rem;
   }
   &__store-title {
     color: var(--slate, #5c667e);
     font-feature-settings: "clig" off, "liga" off;
 
     /* M H4 */
+    margin: 0.3rem 0rem;
     font-size: 11px;
     font-style: normal;
     font-weight: 600;
@@ -213,6 +218,7 @@
 
     /* M P2 */
     font-size: 13px;
+    margin-top: 0rem;
     font-style: normal;
     font-weight: 400;
     line-height: 20px; /* 153.846% */

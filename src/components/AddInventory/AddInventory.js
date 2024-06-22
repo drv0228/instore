@@ -103,7 +103,7 @@ function AddInventory() {
                   name="itemName"
                   type="text"
                   id="name"
-                  placeholder="Item Name"
+                  // placeholder="Item Name"
                   value={itemName}
                   onChange={(e) => setItemName(e.target.value)}
                   className={`add-item__input ${
@@ -123,7 +123,7 @@ function AddInventory() {
                   name="itemDescription"
                   type="text"
                   id="description"
-                  placeholder="Please enter a brief item Description..."
+                  // placeholder="Please enter a brief item Description..."
                   value={itemDescription}
                   onChange={(e) => setItemDescription(e.target.value)}
                   className={`add-item__input ${
@@ -213,7 +213,7 @@ function AddInventory() {
                     id="quantity"
                     name="quantity"
                     value={quantity}
-                    placeholder="0"
+                    // placeholder="0"
                     onChange={(e) => setQuantity(e.target.value)}
                     className={`add-warehouse__input ${
                       hasError("quantity") ? "add-item__input--error" : ""
@@ -263,7 +263,7 @@ function AddInventory() {
             </button>
           </Link>
           <button className="confirm-button" onClick={handleSubmit}>
-            Add Item
+            + Add Item
           </button>
         </div>
       </section>

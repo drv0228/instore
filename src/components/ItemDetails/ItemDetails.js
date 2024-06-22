@@ -49,7 +49,6 @@ function ItemDetails() {
                 <h1 className='item-details__h1'>{item.item_name}</h1>
                 <div className='item-details__edit-button' onClick={handleEditButton}>
                     <img src={editButton} alt='button used to edit one item'/>
-                    <p>Edit</p>
                 </div>
             </section>
             <section className='item-details__bottom'>
