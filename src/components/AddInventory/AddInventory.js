@@ -81,7 +81,7 @@ function AddInventory() {
   };
 
   return (
-    <>
+    <main className="add-item">
       <section className="add-inventory">
         <div className="add-inventory__h1-container">
           <img
@@ -227,7 +227,7 @@ function AddInventory() {
                 </div>
               )}
               <div className="item__input-container">
-                <label htmlFor="warehouse">Store:</label>
+                <label htmlFor="warehouse">Store</label>
                 <select
                   id="store"
                   name="store"
@@ -267,7 +267,7 @@ function AddInventory() {
           </button>
         </div>
       </section>
-    </>
+      </main>
   );
 }
 

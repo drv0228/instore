@@ -76,19 +76,19 @@ function InventoryList() {
 
         <div className="inventories-content__titles">
           <p className="inventories-content__titles--inventory-item" onClick={() => sortItems('item_name')}>
-            INVENTORY ITEM <img src={Sort} alt="sort arrows" />{" "}
+            INVENTORY ITEM <img className="sort-image" src={Sort} alt="sort arrows" />{" "}
           </p>
           <p className="inventories-content__titles--category" onClick={() => sortItems('category')}>
-            CATEGORY <img src={Sort} alt="sort arrows" />{" "}
+            CATEGORY <img className="sort-image" src={Sort} alt="sort arrows" />{" "}
           </p>
           <p className="inventories-content__titles--status" onClick={() => sortItems('status')}>
-            STATUS <img src={Sort} alt="sort arrows" />{" "}
+            STATUS <img className="sort-image" src={Sort} alt="sort arrows" />{" "}
           </p>
           <p className="inventories-content__titles--quantity">
-            QTY <img src={Sort} alt="sort arrows" />{" "}
+            QTY <img className="sort-image" src={Sort} alt="sort arrows" />{" "}
           </p>
           <p className="inventories-content__titles--store" onClick={() => sortItems('warehouse_name')}>
-            STORE <img src={Sort} alt="sort arrows" />{" "}
+            STORE <img className="sort-image" src={Sort} alt="sort arrows" />{" "}
           </p>
           <p className="inventories-content__titles--actions">ACTIONS</p>
         </div>
@@ -181,7 +181,7 @@ function InventoryList() {
                     <p>STORE</p>
                   </div>
 
-                  <div className="inventories-content__list-inventory--warehouse">
+                  <div className="inventories-content__list-inventory--store">
                     <p>{item.warehouse_name}</p>
                   </div>
 

@@ -63,6 +63,7 @@
             @include tablet {
               @include font-h1-page-header;
               padding: 0;
+              margin-right: 5.5rem;
             }
         }
 
@@ -76,11 +77,11 @@
             justify-content: space-around;
 
             @include tablet {
-                height: 4.948vw;
-                width: 24.089vw;
+                height: 4.7vw;
+                width: 22vw;
                 margin-left: 3.125rem;
                 margin-right: 1rem;
-                padding: 0 .3125rem;
+                padding: 0 .3125rem 0 .7rem;
             }
             @include desktop{
                 height: 2.969vw;
@@ -112,8 +113,8 @@
             @include tablet{
                 @include font-h3-labels-links-buttons;
                 margin: 0;
-                width: 24.089vw;
-                height: 4.948vw;
+                padding: .5rem 1rem;
+                height: 5vw;
             }
 
             @include desktop{
@@ -145,7 +146,7 @@
             @include tablet{
             display: flex;
             align-items: center;
-            margin-right: 3.125rem;
+       
             }  
             @include desktop{
                 margin: 0;
@@ -156,7 +157,7 @@
             @include tablet{
             display: flex;
             align-items: center; 
-            margin-right: 1.1875rem;
+            margin-left: 3.5rem;
             }
             @include desktop{
                 margin-right: 4.8125rem;
@@ -168,7 +169,8 @@
             @include tablet{
             display: flex;
             align-items: center;
-            margin-right: .875rem;
+          
+            margin-left: 2.5rem;
             } 
             @include desktop{
                 margin-right: -5.125rem;
@@ -178,7 +180,7 @@
             @include tablet{
             display: flex;
             align-items: center;
-            margin-left: 1.9375rem;
+            margin-left: 3rem;
             }
             @include desktop{
                 margin-left: 9.9375rem;
@@ -190,7 +192,7 @@
             @include tablet{
             display: flex;
             align-items: center;
-            margin-left: .5625rem;
+            margin-left: 1.3rem;
             }
             @include desktop{
                 width: 5.859vw;
@@ -204,7 +206,7 @@
             align-items: center;
             width: 7.417vw;
             justify-content: flex-end;
-            margin-left: .375rem;
+            margin-left: 2.7rem;
             }  
             @include desktop {
                 width: 4.417vw;
@@ -351,7 +353,7 @@
                 @include font-h4-table-header;
                 width: 17.839vw; 
                 font-weight: 600;
-                padding: .25rem .5rem;
+                padding: .25rem 1rem;
                 border-radius: 1.25rem;
                 width: auto;
                 height: auto;
@@ -375,6 +377,7 @@
                 @include font-m-p2-body-medium;
                 color:  $primary-instock-black;
                 @include tablet{
+                    margin-left: .5rem;
                     width: 5.208vw;     
                 }
                 @include desktop{
@@ -419,4 +422,10 @@
   &__links{
     text-decoration: none;
   }
+}
+.sort-image {
+    @include tablet {
+        width: 15px;
+        height: 15px;
+    }
 }

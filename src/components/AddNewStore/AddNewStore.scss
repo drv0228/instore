@@ -12,6 +12,7 @@
   padding-top: 1rem;
   height: auto;
   @include tablet {
+    padding-top: 0rem;
     background: linear-gradient(
       $background-graphite 13.75%,
       $background-light-grey 13.75%,
@@ -123,7 +124,6 @@
     border-radius: 1.25rem;
     border: 1px solid $secondary-cloud;
     color: $secondary-slate;
-
     padding: 0rem 1rem;
     height: 9.25vw;
     @include font-m-p2-body-medium;
@@ -137,7 +137,7 @@
 
     @include tablet {
       @include font-p2-body-medium;
-      height: 4.948vw;
+      height: 4.5vw;
     }
     @include desktop {
       height: 2.969vw;
@@ -185,7 +185,7 @@
       border-color: $primary-instock-indigo;
     }
     @include tablet {
-      width: 10.5vw;
+      padding: .5rem 1rem;
       height: 4.948vw;
       @include font-h3-labels-links-buttons;
     }
@@ -206,7 +206,7 @@
       background-color: $background-graphite;
     }
     @include tablet {
-      width: 18vw;
+      padding: .5rem 1.5rem;
       @include font-h3-labels-links-buttons;
       height: 4.948vw;
     }

@@ -2,6 +2,18 @@
 @use "../../styles/partials/__typography" as *;
 @use "../../styles/partials/__mixins" as *;
 
+.item-details-wrap {
+  @include tablet {
+    background: linear-gradient(
+      $background-graphite 5.3rem,
+      #f7f8f9 3.75rem,
+      #f7f8f9 85%
+    );
+    position: relative;
+    top: 0rem;
+  }
+}
+
 .item-details {
   font-family: "Titillium Web", sans-serif;
   position: relative;
@@ -11,8 +23,9 @@
   background: var(--white, #fff);
   box-shadow: 0px 2px 5px 0px rgba(19, 24, 44, 0.1);
   @include tablet {
-    margin: 3rem;
+    top: -1rem;
     border-radius: 3px;
+    margin-bottom: 23rem;
   }
   &__back-button {
     display: flex;
@@ -34,6 +47,8 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
+      padding: 1rem 1.5rem 2rem 1.5rem;
+      
     }
   }
   &__category-title {
@@ -123,8 +138,11 @@
     font-weight: 400;
     line-height: 20px; /* 153.846% */
   }
-  &__left-column {
-  }
+  // &__left-column {
+  //   @include tablet {
+  //     border-right: $secondary-cloud;
+  //   }
+  // }
   &__status-container {
     display: flex;
     flex-direction: row;
@@ -149,7 +167,7 @@
     font-feature-settings: "clig" off, "liga" off;
 
     /* M H4 */
-    
+
     font-size: 11px;
     font-style: normal;
     font-weight: 600;
@@ -225,5 +243,11 @@
     @include tablet {
       width: 100%;
     }
+  }
+}
+
+.item-details__left-column {
+  @include tablet {
+    border-right: $primary-instock-black;
   }
 }

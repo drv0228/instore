@@ -14,6 +14,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
     }
     @include desktop {
       background-color: rgb(19, 24, 44, 0.5);
@@ -27,10 +28,12 @@
   width: 100%;
   height: 76vh;
   position: relative;
+  top: -15.5rem;
   background-color: $primary-white;
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
+  border-radius: .2rem;
   justify-content: space-between;
   font-family: "Titillium Web", sans-serif;
 
@@ -108,6 +111,7 @@
     margin-bottom: 2rem;
     @include tablet {
       justify-content: flex-end;
+
     }
   }
 
@@ -123,7 +127,6 @@
       height: 5vw;
       padding: 0;
       border-radius: 4vw;
-      margin-left: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -145,6 +148,7 @@
       }
       @include tablet {
         text-align: center;
+        margin-right: 1rem;
       }
     }
 

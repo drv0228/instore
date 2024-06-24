@@ -78,7 +78,7 @@ function StoreList() {
           <p className="stores-content__titles--store" onClick={() => sortItems('warehouse_name')}>
             STORE <img src={Sort} alt="sort arrows" />{" "}
           </p>
-          <p className="stores-content__title--address">
+          <p className="stores-content__titles--address">
             ADDRESS <img src={Sort} alt="sort arrows" />{" "}
           </p>
           <p className="stores-content__titles--contact-name" onClick={() => sortItems('contact_name')}>

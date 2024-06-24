@@ -41,6 +41,7 @@ function ItemDetails() {
     const inStock = item.quantity !== 0;
 
     return (
+        <section className='item-details-wrap'>
         <div className='item-details'>
             <section className='item-details__top'>
                 <div className='item-details__back-button' onClick={handleBackButton}>
@@ -74,6 +75,7 @@ function ItemDetails() {
                 </div>
             </section>
         </div>
+        </section>
     );
 }
 
