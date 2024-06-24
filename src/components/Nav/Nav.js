@@ -19,6 +19,7 @@ function Nav() {
   return (
     <>
       <nav className="nav">
+
         <div className="nav__img-container">
         <Link
             to="/"
@@ -26,6 +27,7 @@ function Nav() {
            
           </Link>
         </div>
+
         <div className="nav__link-container">
           <Link
             onClick={handleClick}
@@ -47,6 +49,7 @@ function Nav() {
             <p>Inventory</p>
           </Link>
         </div>
+        
       </nav>
     </>
   );

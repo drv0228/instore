@@ -183,7 +183,7 @@ function AddInventory() {
                       hasError("itemStatus") ? "add-item__input--error" : ""
                     }`}
                   ></input>
-                  <label>In stock</label>
+                  <label className="in-stock">In stock</label>
                 </div>
                 <div className="radio-item">
                   <input
@@ -196,7 +196,7 @@ function AddInventory() {
                       hasError("category") ? "add-item__input--error" : ""
                     }`}
                   ></input>
-                  <label>Out of stock</label>
+                  <label className="in-stock">Out of stock</label>
                 </div>
               </div>
               {hasError("itemStatus") && (

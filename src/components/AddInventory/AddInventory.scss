@@ -19,6 +19,9 @@
       $background-light-grey 85.25%
     );
   }
+  @include desktop {
+    padding-top: .1rem;
+  }
 }
 .add-inventory {
   font-family: "Titillium Web", sans-serif;
@@ -31,7 +34,7 @@
   border: none;
   background: white;
  @include tablet {
-  top: .8rem;
+  top: .6rem;
   margin: 0 2rem;
  }
   @include desktop {
@@ -68,6 +71,9 @@
   @include tablet {
     height: 1vw;
   border-bottom: 1px solid $secondary-cloud;
+  }
+  @include desktop {
+    height: .1vw;
   }
 }
 
@@ -128,6 +134,9 @@ textarea {
     padding-top: 0rem;
     height: 25vh;
   }
+  @include desktop {
+    height: 13vh;
+  }
 }
 
 .radio-container {
@@ -163,9 +172,11 @@ textarea {
 }
 
 label {
+  
   @include font-m-h3-labels-links-buttons;
   @include tablet {
     @include font-h3-labels-links-buttons;
+    
   }
 }
 
@@ -228,7 +239,12 @@ label {
   color: white;
   border: 2px;
   @include tablet {
-    // width: 15%;
+    padding: 0 1rem;
+    height: 4.948vw;
+  }
+  @include desktop {
+    height: 2.5rem;
+    margin-right: 2rem;
   }
 }
 
@@ -239,7 +255,12 @@ label {
   border: 1px solid $secondary-cloud;
   // width: 100%;
   @include tablet {
-    // width: 84%;
+    padding: 0 1rem;
+      height: 4.948vw;
+  }
+  @include desktop {
+    height: 2.5rem;
+    margin-right: 0rem;
   }
 }
 
@@ -248,10 +269,19 @@ label {
   @include tablet {
     width: 13%;
   }
+  @include desktop {
+    width: 9%;
+  }
 }
 .add-itemStatus__input {
   @include tablet {
     margin: 0;
     padding: 0;
   }
+  @include desktop {
+    margin-right: .5rem;
+  }
+}
+.in-stock {
+  font-weight: 400;
 }

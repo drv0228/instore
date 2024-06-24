@@ -51,8 +51,9 @@ function Deleteinventory() {
           </h1>
           <p className="instock__paragraph">
             Please confirm that you'd like to delete {inventoryName} from the
-            inventory list. You won't be able to undo this action.
-          </p>
+            inventory list.  </p>
+            You won't be able to undo this action.
+         
         </div>
         <div className="instock__button-container">
           <button className="instock__button instock__button--1" onClick={handleCancelClick}>Cancel</button>

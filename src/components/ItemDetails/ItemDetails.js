@@ -62,11 +62,11 @@ function ItemDetails() {
                 <div className='item-details__right-column'>
                     <div className='item-details__status-container'>
                         <div className='item-details__status-left'>
-                            <p className='item-details__status-title'>Status</p>
+                            <p className='item-details__status-title'>Status:</p>
                             {inStock ? <p className='item-details__status-value-green'>In Stock</p> : <p className='item-details__status-value-red'>Out of stock</p>}
                         </div>
                         <div className='item-details__status-right'>
-                            <p className='item-details__quantity-title'>Quantity</p>
+                            <p className='item-details__quantity-title'>Quantity:</p>
                             <p className='item-details__quantity-value'>{item.quantity}</p>
                         </div>
                     </div>

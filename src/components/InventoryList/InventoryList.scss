@@ -135,7 +135,7 @@
             @include font-h4-table-header;
             height: 5.208vw;
         }
-        @include desktop{
+        @include desktop {
             padding: 0 2.5rem;
             justify-content: space-between;
             height: 3.125vw;
@@ -158,22 +158,14 @@
             display: flex;
             align-items: center; 
             margin-left: 3.5rem;
-            }
-            @include desktop{
-                margin-right: 4.8125rem;
-                margin-left: 2.0625rem;
-            }    
+            }   
         }
         &--status{
             cursor: pointer;
             @include tablet{
             display: flex;
             align-items: center;
-          
             margin-left: 2.5rem;
-            } 
-            @include desktop{
-                margin-right: -5.125rem;
             } 
         }
         &--quantity{
@@ -182,10 +174,6 @@
             align-items: center;
             margin-left: 3rem;
             }
-            @include desktop{
-                margin-left: 9.9375rem;
-                width: 0.391vw;
-            }
         }
         &--store{
             cursor: pointer;
@@ -193,10 +181,6 @@
             display: flex;
             align-items: center;
             margin-left: 1.3rem;
-            }
-            @include desktop{
-                width: 5.859vw;
-                margin-left: 2.5625rem;
             }
         }
 
@@ -208,9 +192,6 @@
             justify-content: flex-end;
             margin-left: 2.7rem;
             }  
-            @include desktop {
-                width: 4.417vw;
-            }
         }
     }
 
@@ -234,9 +215,6 @@
                 justify-content: space-between;
                 padding: 1rem 2rem;
             }
-            @include desktop{
-                padding: .8125rem 2.5rem;
-            }
 
             &--rows {
                 display: flex;
@@ -246,6 +224,7 @@
                   justify-content: space-between;
                   width: 78.125vw;
                 }   
+               
             }
             &--columns{
                 width: 45.313vw;
@@ -267,7 +246,7 @@
                     
                 }
                 @include desktop{
-                    width: 17.969vw;
+                    width: 27vw;
                 }
             }
 
@@ -286,7 +265,7 @@
                     width: 20.406vw;
                 }
                 @include desktop{
-                    width: 14.8vw;
+                    width: 14vw;
                 }
 
                 &-layout{
@@ -318,6 +297,8 @@
                 @include tablet{
                     display: none;   
                 }
+               
+              
             }
 
 
@@ -330,8 +311,7 @@
                     width: 13.583vw;
                 }
                 @include desktop{
-                    width: 14.766vw;
-                    margin-right: 2.1875rem;
+                    width: 16vw;
                 }
             }
 
@@ -343,6 +323,7 @@
                 @include tablet{
                     display: none;
                 }
+                
             }
 
             &--status-tablet{
@@ -370,6 +351,10 @@
                     background: rgba(201, 69, 21, 0.07);
                 }
                 }
+                @include desktop {
+                    margin-left: -5rem;
+                    padding: .4rem 1rem;
+                }
             }
 
 
@@ -381,8 +366,8 @@
                     width: 5.208vw;     
                 }
                 @include desktop{
-                    width: 15vw;
-                    margin-right: 3.9375rem;
+                    margin-left: 3rem;
+            
                 }
             }
             &--store{
@@ -395,8 +380,9 @@
                     justify-content: flex-end;
                 }
                 @include desktop{
-                    width: 15vw;
-                    margin-right: 3.9375rem;
+                    width: 8vw;
+                    margin-left: 0;
+                    margin-right: 8rem;
                 }
             }
 

@@ -43,6 +43,7 @@
       padding: 2rem 0 1.325rem 2rem;
     }
     @include desktop {
+      padding-bottom: 2rem;
       margin-bottom: 1.5rem;
     }
   }
@@ -164,6 +165,9 @@
       @include font-p2-body-medium;
       height: 13vw;
     }
+    @include desktop {
+      height: 8vw;
+    }
   }
   &__error-message {
     color: $supporting-red;
@@ -210,8 +214,9 @@
       @include font-h3-labels-links-buttons;
     }
     @include desktop {
-      width: 9%;
+      width: 8%;
       height: 2.969vw;
+      padding: 0.5rem;
     }
   }
   &__button-save {
