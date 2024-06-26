@@ -19,7 +19,7 @@ function Deletestore() {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  });
 
   function handleDeleteClick() {
     const urlId = `http://localhost:5050/api/warehouses/` + id;

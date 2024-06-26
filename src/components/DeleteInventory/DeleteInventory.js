@@ -20,7 +20,7 @@ function Deleteinventory() {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  });
 
   function handleDeleteClick() {
     const url = "http://localhost:5050/api/inventories/" + id;

@@ -35,7 +35,7 @@ function StoreInventoryList() {
 
   useEffect(() => {
     getAndDisplayStoreInventories();
-  }, [id]);
+  });
 
   const getAndDisplayStoreInventories = () => {
     axios

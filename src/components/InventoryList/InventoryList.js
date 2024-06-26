@@ -17,7 +17,7 @@ function InventoryList() {
 
   useEffect(() => {
     getAndDisplayInventories();
-  }, []);
+  });
 
   const getAndDisplayInventories = () => {
     axios

@@ -20,7 +20,7 @@ function StoreList() {
 
   useEffect(() => {
     getAndDisplayStores();
-  }, []);
+  });
 
   const getAndDisplayStores = () => {
     axios
