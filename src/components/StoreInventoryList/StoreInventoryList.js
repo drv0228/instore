@@ -12,7 +12,7 @@ function StoreInventoryList() {
   const { id } = useParams();
 
   const [storeInventoriesItems, setstoreInventoriesItems] = useState([]);
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
 
   let defaultStoreId = null;
 
@@ -22,9 +22,9 @@ function StoreInventoryList() {
 
   const storeIdToDisplay = id !== undefined ? id : defaultStoreId;
 
-  const filteredStores = storeInventoriesItems.filter((store) => {
-    return store.id !== storeIdToDisplay;
-  });
+  // const filteredStores = storeInventoriesItems.filter((store) => {
+  //   return store.id !== storeIdToDisplay;
+  // });
   const storeinventoriesUrl = `http://localhost:5050/api/warehouses/${storeIdToDisplay}/inventories`;
   //  const  storeinventoriesUrl = `http:// instore-server.up.railway.app/api/warehouses/${storeIdToDisplay}/inventories`;
 
@@ -42,11 +42,11 @@ function StoreInventoryList() {
       .get(storeinventoriesUrl)
       .then((result) => {
         setstoreInventoriesItems(result.data);
-        setError(null); // Clear previous errors
+        // setError(null); // Clear previous errors
       })
       .catch((error) => {
         console.log("got error calling API", error);
-        setError(error.message);
+        // setError(error.message);
       });
   };
 

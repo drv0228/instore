@@ -29,8 +29,8 @@ function StoreDetails() {
       </>
     );
   } else {
-    let inStock;
-    details[0].quantity !== 0 ? (inStock = true) : (inStock = false);
+    // let inStock = null;
+    // details[0].quantity !== 0 ? ( inStock = true) : (inStock = false);
     return (
       <>
         <section className="store-details-wrap">

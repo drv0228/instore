@@ -1,3 +1,4 @@
+import React from "react";
 import './ItemDetails.scss';
 import backLogo from '../../assets/images/arrow_back-24px.svg';
 import editButton from '../../assets/images/edit-24px-white.svg';

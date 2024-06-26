@@ -1,3 +1,4 @@
+import React from "react";
 import "./AddNewStore.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -17,8 +18,10 @@ function AddNewStore() {
 
   const [errors, setErrors] = useState({});
 
-  let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  let regexEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
   let regexTel = /^\+\d{1,2}\s\(\d{3}\)\s\d{3}-\d{4}$/;
+
 
   //function that checks whether there is an error associated with a particular form field.
   const hasError = (field) => {
@@ -72,7 +75,7 @@ function AddNewStore() {
       //Send the data to the server using the axios library's PUT method to update data on the server
       axios
         .post(`http://localhost:5050/api/warehouses/`, storeData)
-        .then((response) => {
+        .then(() => {
           alert("Updated new warehouse details successfully!");
           setName("");
           setAddress("");

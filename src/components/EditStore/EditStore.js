@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
@@ -19,7 +20,7 @@ function EditStore() {
 
   const [errors, setErrors] = useState({});
 
-  let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  let regexEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
   let regexTel = /^\+\d{1,2}\s\(\d{3}\)\s\d{3}-\d{4}$/;
 
   //function that checks whether there is an error associated with a particular form field.

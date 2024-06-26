@@ -1,3 +1,4 @@
+import React from "react";
 import "./DeleteInventory.scss";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -25,7 +26,7 @@ function Deleteinventory() {
     const url = "http://localhost:5050/api/inventories/" + id;
     axios
       .delete(url)
-      .then((response) => {
+      .then(() => {
         alert("Inventory deleted succesfully");
         window.location.replace("/inventory");
       })
@@ -50,9 +51,9 @@ function Deleteinventory() {
             Delete {inventoryName} inventory item?
           </h1>
           <p className="instock__paragraph">
-            Please confirm that you'd like to delete {inventoryName} from the
+            Please confirm that you would like to delete {inventoryName} from the
             inventory list.  </p>
-            You won't be able to undo this action.
+            You would not be able to undo this action.
          
         </div>
         <div className="instock__button-container">

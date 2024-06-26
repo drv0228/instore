@@ -25,7 +25,7 @@ function Deletestore() {
     const urlId = `http://localhost:5050/api/warehouses/` + id;
     axios 
     .delete(urlId)
-    .then((response) => {
+    .then(() => {
       alert("Store deleted succesfully");
       window.location.replace("/");
     })
@@ -54,7 +54,7 @@ return (
             Delete {storeName} store?
           </h1>
           <p className="store__paragraph">
-            Please confirm that you'd like to delete {storeName} store from the list of stores. You won't be able to undo this action.
+            Please confirm that you would like to delete {storeName} store from the list of stores. You would not be able to undo this action.
           </p>
         </div>
         <div className="store__button-container">
