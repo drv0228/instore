@@ -76,7 +76,7 @@ function AddNewStore() {
       axios
         .post(`http://localhost:5050/api/warehouses/`, storeData)
         .then(() => {
-          alert("Updated new warehouse details successfully!");
+          alert("Updated new store details successfully!");
           setName("");
           setAddress("");
           setCity("");
