@@ -18,10 +18,6 @@ function StoreList() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [sortOrder, setSortOrder] = useState("asc");
 
-  useEffect(() => {
-    getAndDisplayStores();
-  }, [getAndDisplayStores]);
-
   const getAndDisplayStores = async (retries = 5, delay = 1000) => {
     for (let i = 0; i < retries; i++) {
       try {
@@ -38,6 +34,9 @@ function StoreList() {
       }
     }
   };
+  useEffect(() => {
+    getAndDisplayStores();
+  }, [getAndDisplayStores]);
 
   const sortItems = (key) => {
     const sortedItems = [...contentItems].sort((a, b) => {
