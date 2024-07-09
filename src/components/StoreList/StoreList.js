@@ -20,17 +20,23 @@ function StoreList() {
 
   useEffect(() => {
     getAndDisplayStores();
-  });
+  }, []);
 
-  const getAndDisplayStores = () => {
-    axios
-      .get(storesUrl)
-      .then((result) => {
+  const getAndDisplayStores = async (retries = 5, delay = 1000) => {
+    for (let i = 0; i < retries; i++) {
+      try {
+        const result = await axios.get(storesUrl);
         setContentItems(result.data);
-      })
-      .catch((error) => {
-        console.log("got error calling API", error);
-      });
+        return; // Exit the loop if the request is successful
+      } catch (error) {
+        console.log(`Attempt ${i + 1} failed:`, error);
+        if (i < retries - 1) {
+          await new Promise((resolve) => setTimeout(resolve, delay)); // Wait for the delay before retrying
+        } else {
+          console.log("All attempts to call API failed.");
+        }
+      }
+    }
   };
 
   const sortItems = (key) => {
