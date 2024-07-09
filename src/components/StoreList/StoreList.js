@@ -36,7 +36,7 @@ function StoreList() {
   };
   useEffect(() => {
     getAndDisplayStores();
-  }, []);
+  });
 
   const sortItems = (key) => {
     const sortedItems = [...contentItems].sort((a, b) => {
