@@ -9,7 +9,8 @@ import Sort from "../../assets/images/sort-24px.svg";
 import { Link } from "react-router-dom";
 
 function InventoryList() {
-  const inventoriesUrl = `http://localhost:5050/api/inventories`;
+  // const inventoriesUrl = `http://localhost:5050/api/inventories`;
+  const inventoriesUrl = `https://instore-server.up.railway.app/api/inventories`;
 
   const [inventoriesItems, setInventoriesItems] = useState([]);
   const [selectedInventoriesItem, setSelectedInventoriesItem] = useState(null);

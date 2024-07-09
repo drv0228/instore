@@ -10,7 +10,9 @@ import StoreInventoryList from "../StoreInventoryList/StoreInventoryList.js";
 function StoreDetails() {
   const [details, setDetails] = useState([]);
   const { id } = useParams();
-  const storeURL = "http://localhost:5050/api/warehouses/" + id;
+  // const storeURL = "http://localhost:5050/api/warehouses/" + id;
+  const storeURL = "http://instore-server.up.railway.app/api/warehouses" + id;
+  
   useEffect(() => {
     axios
       .get(storeURL)

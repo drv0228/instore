@@ -74,7 +74,7 @@ function AddNewStore() {
       };
       //Send the data to the server using the axios library's PUT method to update data on the server
       axios
-        .post(`http://localhost:5050/api/warehouses/`, storeData)
+        .post(`http://instore-server.up.railway.app/api/warehouses/`, storeData)
         .then(() => {
           alert("Updated new warehouse details successfully!");
           setName("");

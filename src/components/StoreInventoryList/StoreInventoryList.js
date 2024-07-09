@@ -25,8 +25,8 @@ function StoreInventoryList() {
   // const filteredStores = storeInventoriesItems.filter((store) => {
   //   return store.id !== storeIdToDisplay;
   // });
-  const storeinventoriesUrl = `http://localhost:5050/api/warehouses/${storeIdToDisplay}/inventories`;
-  //  const  storeinventoriesUrl = `http:// instore-server.up.railway.app/api/warehouses/${storeIdToDisplay}/inventories`;
+  // const storeinventoriesUrl = `http://localhost:5050/api/warehouses/${storeIdToDisplay}/inventories`;
+   const  storeinventoriesUrl = `https://instore-server.up.railway.app/api/warehouses/${storeIdToDisplay}/inventories`;
 
   const [
     selectedStoreInventoriesItem,

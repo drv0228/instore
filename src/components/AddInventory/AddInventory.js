@@ -49,7 +49,7 @@ function AddInventory() {
       };
       console.log("Sending inventory data:", inventoryData);
       axios
-        .post(`http://localhost:5050/api/inventories/`, inventoryData)
+        .post(`http://instore-server.up.railway.app/api/inventories/`, inventoryData)
         .then((response) => {
           alert("Updated new warehouse details successfully!");
           setItemName("");

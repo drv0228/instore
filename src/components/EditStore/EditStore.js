@@ -76,7 +76,8 @@ function EditStore() {
       //Send the data to the server using the axios library's PUT method to update data on the server
       axios
         .put(
-          `http://localhost:5050/api/warehouses/` + idFromParams,
+          // `http://localhost:5050/api/warehouses/` + idFromParams,
+          `http://instore-server.up.railway.app/api/warehouses/` + idFromParams,
           storeData
         )
         .then((response) => {

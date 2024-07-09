@@ -18,7 +18,9 @@ function ItemDetails() {
         window.location.replace('/edititem/' + id);
     }
 
-    const url = "http://localhost:5050/api/inventories/" + id;
+    // const url = "http://localhost:5050/api/inventories/" + id;
+    const url = "http://instore-server.up.railway.app/api/inventories/" + id;
+
     useEffect(() => {
         axios
             .get(url)

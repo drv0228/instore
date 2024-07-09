@@ -21,7 +21,8 @@ function EditItem() {
 
   const [errors, setErrors] = useState({});
 
-  const url = "http://localhost:5050/api/inventories/" + id;
+  // const url = "http://localhost:5050/api/inventories/" + id;
+  const url = "http://instore-server.up.railway.app/api/inventories/" + id;
 
   useEffect(() => {
     axios
@@ -41,7 +42,7 @@ function EditItem() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5050/api/warehouses")
+      .get("http://instore-server.up.railway.app/api/warehouses")
       .then((response) => {
         setStoreArray(response.data);
         for (let i = 0; i < response.data.length; i++) {
@@ -71,7 +72,7 @@ function EditItem() {
       console.log(itemData);
 
       axios
-        .put(`http://localhost:5050/api/inventories/` + id, itemData)
+        .put(`http://instore-server.up.railway.app/api/inventories/` + id, itemData)
         .then((response) => {
           console.log(response.data);
         })

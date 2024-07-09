@@ -12,7 +12,7 @@ function Deletestore() {
    
   useEffect(() => {
     axios 
-      .get(`http://localhost:5050/api/warehouses/` + id)
+      .get(`http://instore-server.up.railway.app/api/warehouses/` + id)
       .then((response) => {
         setStoreName(response.data[0].warehouse_name);
       })
@@ -22,7 +22,7 @@ function Deletestore() {
   });
 
   function handleDeleteClick() {
-    const urlId = `http://localhost:5050/api/warehouses/` + id;
+    const urlId = `http://instore-server.up.railway.app/api/warehouses/` + id;
     axios 
     .delete(urlId)
     .then(() => {

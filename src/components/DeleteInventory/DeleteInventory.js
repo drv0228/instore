@@ -13,7 +13,7 @@ function Deleteinventory() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5050/api/inventories/` + id)
+      .get(`http://instore-server.up.railway.app/api/inventories/` + id)
       .then((response) => {
         setInventoryName(response.data.item_name);
       })
