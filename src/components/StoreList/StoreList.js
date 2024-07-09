@@ -20,7 +20,7 @@ function StoreList() {
 
   useEffect(() => {
     getAndDisplayStores();
-  }, []);
+  }, [getAndDisplayStores]);
 
   const getAndDisplayStores = async (retries = 5, delay = 1000) => {
     for (let i = 0; i < retries; i++) {
