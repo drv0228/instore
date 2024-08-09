@@ -54,13 +54,13 @@ Built with React, SQL, and NODE JS, INSTORE provides a seamless platform for ret
 <!-- <img src="src/assets/readmeImages/desktop-demo.gif" width=100%>|<p align="center"><br/><img src="src/assets/readmeImages/mobile-demo.gif" width=60%></p> -->
 
 ### Built With
-![NODE JS][NODE JS -shield]
+![NodeJS][NodeJS -shield]
 ![MySQL][MySQL-shield]
 ![React][React-shield]
 ![JAVASCRIPT][JavaScript-shield]
 ![SASS][SASS-shield]
 ![CSS][CSS-shield]
-![HTML][SASS-shield]
+![HTML][HTML-shield]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -136,7 +136,7 @@ Helping and offering admin and ownwers a organized space for  -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
 ## Contact
-Dayana Romero Villavicencio | [LinkedIn](https://www.linkedin.com/in/dayana-romero/) | [Portfolio](https:/dayana-portfolio.info/)<br>
+Dayana Romero Villavicencio | [LinkedIn](https://www.linkedin.com/in/dayana-romero/) | [Portfolio](http://www.dayana-portfolio.info/)<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
