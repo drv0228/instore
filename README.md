@@ -54,7 +54,7 @@ Built with React, SQL, and NODE JS, INSTORE provides a seamless platform for ret
 <!-- <img src="src/assets/readmeImages/desktop-demo.gif" width=100%>|<p align="center"><br/><img src="src/assets/readmeImages/mobile-demo.gif" width=60%></p> -->
 
 ### Built With
-![NodeJS][NodeJS -shield]
+![NodeJS][NodeJS-shield]
 ![MySQL][MySQL-shield]
 ![React][React-shield]
 ![JAVASCRIPT][JavaScript-shield]
@@ -144,7 +144,7 @@ Dayana Romero Villavicencio | [LinkedIn](https://www.linkedin.com/in/dayana-rome
 
 This project is licensed under the [MIT License](LICENSE). -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
